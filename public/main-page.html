@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home page</title>
+    <style>
+        body {
+            margin: 0 !important;
+        }
+        .container {
+            position: relative;
+            width: 1440px;
+            height: 3260px;
+            background: #FFFFFF;
+        }
+        .header {
+            position: absolute;
+            width: 1440px;
+            height: 84px;
+            left: 0px;
+            top: -1px;
+        }
+        .logo {
+            position: absolute;
+            width: 253px;
+            height: 83px;
+            left: 0px;
+            top: 1px;
+
+            background: #D72130;
+        }
+        .logo .text {
+            position: absolute;
+            width: 119px;
+            height: 28px;
+            left: 68px;
+            top: 27px;
+
+            font-family: Open Sans;
+            font-style: normal;
+            /*font-weight: 600;*/
+            font-size: 22px;
+            line-height: 28px;
+            /* identical to box height, or 127% */
+
+            color: #FFFBFB;
+        }
+        .search {
+            position: absolute;
+            left: 20.14%;
+            right: 72.5%;
+            top: 39.29%;
+            bottom: 38.1%;
+        }
+        .header input {
+            position: absolute;
+            top: 0;
+            left: 20px;
+            border: none;
+            width: 70px;
+            height: 19px;
+
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 16px;
+            line-height: 19px;
+            /* identical to box height */
+
+            color: #B2B2B2;
+        }
+        .header input::placeholder {
+            color: #B2B2B2;
+        }
+        .header .search .icon-search {
+            position: absolute;
+            background-image: url(img/iconfinder.png);
+            width: 16px;
+            height: 17px;
+        }
+        .header .social {
+            position: absolute;
+            left: 54.1%;
+            right: 33.4%;
+            top: 36.9%;
+            bottom: 39.29%;
+        }
+        .header .social span {
+            position: absolute;
+            height: 22px;
+            left: 0%;
+            right: 20.83%;
+            top: calc(50% - 22px/2 + 0.5px);
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            /* identical to box height, or 157% */
+
+            /* Lable name */
+            color: #7F8899;
+        }
+        .header .social .fb {
+            position: absolute;
+            left: 53px;
+            right: 0%;
+            top: 4.59%;
+            bottom: 0.67%;
+            background-image: url(img/fb.png);
+            width: 9px;
+            height: 18px;
+        }
+        .header .social .tw {
+            position: absolute;
+            left: 93px;
+            right: 0%;
+            top: 4.59%;
+            bottom: 0.67%;
+            background-image: url(img/twitter.png);
+            width: 21px;
+            height: 19px;
+        }
+        .header .social .gp {
+            position: absolute;
+            left: 139px;
+            right: 0%;
+            top: 4.59%;
+            bottom: 0.67%;
+            background-image: url(img/g-plus.png);
+            width: 20px;
+            height: 19px;
+        }
+
+        .header .user {
+            position: absolute;
+            width: 132px;
+            height: 34px;
+            left: 1132px;
+            top: 25px;
+        }
+        .header .user .ellipse {
+            position: absolute;
+            width: 34px;
+            height: 34px;
+
+            background: url(img/Ellipse.png);
+        }
+        .header .user .title {
+            position: absolute;
+            width: 90px;
+            height: 13px;
+            left: 40px;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 24px;
+        /* or 200% */
+
+            color: #000000;
+        }
+        .header .user .polygon {
+            position: absolute;
+            width: 11px;
+            height: 8px;
+            left: 120px;
+            top: 6px;
+
+            background: #000000;
+            transform: rotate(-180deg);
+        }
+        .header .lang {
+            position: absolute;
+            width: 38px;
+            height: 17px;
+            left: 1340px;
+            top: 35px;
+        }
+        .header .lang span {
+            position: absolute;
+            left: 0%;
+            right: 50%;
+            top: 0%;
+            bottom: 0%;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 12px;
+            line-height: 17px;
+            /* identical to box height, or 142% */
+
+            text-align: center;
+
+            color: #000000;
+        }
+        .header .lang .polygon {
+            position: absolute;
+            width: 11px;
+            height: 8px;
+            left: 27px;
+            top: 6px;
+
+            background: #000000;
+            transform: rotate(-180deg);
+        }
+
+        .left-menu {
+            position: absolute;
+            width: 99px;
+            height: 673px;
+            left: 52px;
+            top: 158px;
+        }
+        .left-menu a {
+            display: block;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+        /* identical to box height, or 136% */
+
+            text-transform: uppercase;
+            text-decoration: none;
+        /* Menu items */
+            color: #B2B2B2;
+        }
+        .left-menu a.active {
+            color: #C63638;
+        }
+
+        .follow {
+            position: absolute;
+            width: 75.72px;
+            height: 92px;
+            left: 13px;
+            top: 388px;
+        }
+        .follow span {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 22px;
+            /* identical to box height, or 157% */
+
+            /* Lable name */
+            color: #7F8899;
+        }
+        .follow .fb {
+            position: absolute;
+            left: 5px;
+            top: 30px;
+            background-image: url(img/fb.png);
+            width: 9px;
+            height: 18px;
+        }
+        .follow .tw {
+            position: absolute;
+            left: 40px;
+            top: 30px;
+            background-image: url(img/twitter.png);
+            width: 21px;
+            height: 19px;
+        }
+
+        .main-article {
+            position: absolute;
+            width: 814px;
+            height: 460px;
+            left: 252px;
+            top: 165px;
+
+            background: url(img/main-photo-article.png);
+        }
+        .main-article .label {
+            top: 0;
+            left: 0;
+            width: 134px;
+            height: 39px;
+            background: #2F2F2F;
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            /* identical to box height, or 136% */
+            color: #FFFFFF;
+            padding: 10px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .all-articles {
+            position: absolute;
+            width: 828px;
+            height: 294px;
+            left: 241px;
+            top: 657px;
+        }
+        .subarticle, .subarticle2, .subarticle3, .subarticle4 {
+            display: inline-block;
+            box-sizing: border-box;
+            width: 202px;
+            height: 294px;
+            padding: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .subarticle .photo,
+        .subarticle2 .photo,
+        .subarticle3 .photo,
+        .subarticle4 .photo {
+            width: 100%;
+            height: 128px;
+            margin-bottom: 17px;
+        }
+        .subarticle .photo {
+            background: url(img/subarticle-photo1.png);
+        }
+        .subarticle2 .photo {
+            background: url(img/subarticle-photo2.png);
+        }
+        .subarticle3 .photo {
+            background: url(img/subarticle-photo3.png);
+        }
+        .subarticle4 .photo {
+            background: url(img/subarticle-photo4.png);
+        }
+        .subarticle .title,
+        .subarticle2 .title,
+        .subarticle3 .title,
+        .subarticle4 .title {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height, or 137% */
+            color: #2B2F43;
+            margin: 8px 0;
+        }
+        .subarticle .title a,
+        .subarticle2 .title a,
+        .subarticle3 .title a,
+        .subarticle4 .title a {
+            text-decoration: none;
+            color: #000;
+        }
+        .subarticle .text,
+        .subarticle2 .text,
+        .subarticle3 .text,
+        .subarticle4 .text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+            /* or 136% */
+            color: #7F7B7B;
+        }
+
+        .rectangle {
+            position: absolute;
+            width: 421px;
+            height: 291px;
+            box-sizing: border-box;
+            left: 892px;
+            top: 251px;
+            background: #F6F6F6;
+            padding: 36px;
+        }
+        .rectangle .date {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 16px;
+            /* identical to box height */
+            color: #7F7B7B;
+        }
+        .rectangle .title {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+            /* identical to box height, or 137% */
+            color: #C63638;
+        }
+        .rectangle .text {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 30px;
+            /* or 136% */
+            color: #2B2F43;
+        }
+        .rectangle .more-btn {
+            bottom: 0;
+            left: 0;
+            position: absolute;
+            width: 174px;
+            height: 35px;
+            box-sizing: border-box;
+            text-align: center;
+            padding: 9px;
+            background: #D72130;
+            color: #FFFBFB;
+        }
+        .paginator {
+            position: absolute;
+            left: 76.53%;
+            right: 8.75%;
+            top: 17.54%;
+            bottom: 81.57%;
+
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 22px;
+        /* identical to box height, or 137% */
+            letter-spacing: 0.761905px;
+            color: #B2B2B2;
+        }
+        .paginator .active {
+            color: #C63638;
+        }
+
+    </style>
+</head>
+<body>
+  <div class="container">
+      <div class="header">
+          <div class="logo">
+              <div class="text">Sports Hub</div>
+          </div>
+          <div class="search">
+              <div class="icon-search"></div>
+              <input class="" type="text" placeholder="Search by" />
+          </div>
+          <div class="social">
+              <span>Share</span>
+              <div class="fb"></div>
+              <div class="tw"></div>
+              <div class="gp"></div>
+          </div>
+          <div class="user">
+              <div class="ellipse"></div>
+              <span class="title">Roma Smith</span>
+              <span class="polygon"></span>
+          </div>
+          <div class="lang">
+              <span>EN</span>
+              <span class="polygon"></span>
+          </div>
+      </div>
+
+      <div class="left-menu">
+          <a class="active" href="">Home</a><br/>
+          <a href="">NBA</a><br/>
+          <a href="">NFL</a><br/>
+          <a href="">NHL</a><br/>
+          <a href="">Golf</a><br/>
+          <a href="">Soccer</a><br/>
+          <a href="">Lifestyle</a><br/>
+          <a href="">Dealbook</a><br/>
+          <a href="">Video</a><br/>
+
+          <div class="follow">
+              <span>Follow</span>
+              <div class="fb"></div>
+              <div class="tw"></div>
+          </div>
+      </div>
+
+      <div class="main-article">
+          <div class="label">NBA</div>
+      </div>
+      <div class="rectangle">
+          <span class="date">Published / 20.09.2019</span>
+          <p class="title">London Games return in 2019</p>
+          <p class="text">Register to receive the latest news on ticket sales for the four NFL London Games in 2019!</p>
+          <div class="more-btn">More</div>
+      </div>
+      <div class="paginator">
+          <span class="prev"><</span>&nbsp;&nbsp;
+          <span class="active">01</span>
+          <span>02</span>
+          <span>03</span>
+          <span>04</span>&nbsp;&nbsp;
+          <span class="next">></span>
+      </div>
+      <div class="all-articles">
+          <div class="subarticle">
+              <div class="photo"></div>
+              <div class="title"><a href="">Raiders release</a></div>
+              <div class="text">After a five-year stint with the Oakland Raiders</div>
+          </div>
+          <div class="subarticle2">
+              <div class="photo"></div>
+              <div class="title"><a href="">London Games</a></div>
+              <div class="text">NFL London Games return in 2019!</div>
+          </div>
+          <div class="subarticle3">
+              <div class="photo"></div>
+              <div class="title"><a href="">2019</a></div>
+              <div class="text">2019 NFL free agency</div>
+          </div>
+          <div class="subarticle4">
+              <div class="photo"></div>
+              <div class="title"><a href="">Lorem ipsum</a></div>
+              <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+          </div>
+      </div>
+
+      <div class="breakdown">
+          break
+      </div>
+  </div>
+</body>
+</html>
