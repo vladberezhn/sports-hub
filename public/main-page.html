@@ -7,6 +7,10 @@
         body {
             margin: 0 !important;
         }
+        body * {
+            font-family: Open Sans;
+            font-style: normal;
+        }
         .container {
             position: relative;
             width: 1440px;
@@ -269,17 +273,13 @@
         }
 
         .main-article {
-            position: absolute;
             width: 814px;
             height: 460px;
-            left: 252px;
-            top: 165px;
 
             background: url(img/main-photo-article.png);
         }
-        .main-article .label {
-            top: 0;
-            left: 0;
+        .main-article .label,
+        .breakdown .bl-main .bl-img .label {
             width: 134px;
             height: 39px;
             background: #2F2F2F;
@@ -295,11 +295,8 @@
             text-align: center;
         }
         .all-articles {
-            position: absolute;
             width: 828px;
             height: 294px;
-            left: 241px;
-            top: 657px;
         }
         .subarticle, .subarticle2, .subarticle3, .subarticle4 {
             display: inline-block;
@@ -367,8 +364,8 @@
             width: 421px;
             height: 291px;
             box-sizing: border-box;
-            left: 892px;
-            top: 251px;
+            left: 639px;
+            top: 90px;
             background: #F6F6F6;
             padding: 36px;
         }
@@ -413,10 +410,8 @@
         }
         .paginator {
             position: absolute;
-            left: 76.53%;
-            right: 8.75%;
-            top: 17.54%;
-            bottom: 81.57%;
+            left: 868px;
+            top: 407px;
 
             font-family: Open Sans;
             font-style: normal;
@@ -430,6 +425,98 @@
         .paginator .active {
             color: #C63638;
         }
+        .main {
+            position: absolute;
+            top: 158px;
+            left: 250px;
+            width: 1190px;
+            height: 3260px;
+        }
+        .breakdown {
+            position: relative;
+        }
+        .breakdown > .title {
+            font-family: Open Sans;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 14px;
+            line-height: 19px;
+            color: #000000;
+            text-align: center;
+            left: 27%;
+            width: 178px;
+            position: relative;
+        }
+        .breakdown .bl-main, .bl-add {
+            width: 390px;
+            height: 295px;
+            border: 1px solid #EDEDED;
+            box-sizing: border-box;
+            display: inline-block;
+            margin: 20px;
+        }
+        .breakdown .bl-add {
+            /*top: 43px;
+            position: absolute;*/
+            border: none;
+        }
+        .breakdown .bl-main .bl-img {
+            width: 389px;
+            height: 196px;
+            background: url(img/rectangle.png);
+        }
+        .breakdown .bl-main .bl-text {
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 30px;
+            /* or 136% */
+            color: #2B2F43;
+            padding: 0 18px;
+        }
+        .breakdown .bl-add .bl {
+            width: 392px;
+            height: 98px;
+            border: 1px solid #EDEDED;
+        }
+        .breakdown .bl-add .bl div {
+            display: inline-block;
+            box-sizing: border-box;
+        }
+        .breakdown .bl-add .bl .img {
+            width: 151px;
+            height: 97px;
+        }
+        .breakdown .bl-add .bl.bl1 .img {
+            background: url(img/Rectangle1.png);
+        }
+        .breakdown .bl-add .bl.bl2 .img {
+            background: url(img/Rectangle2.png);
+        }
+        .breakdown .bl-add .bl.bl3 .img {
+            background: url(img/Rectangle3.png);
+        }
+        .breakdown .bl-add .bl .data {
+            width: 230px;
+            height: 97px;
+            padding: 10px;
+        }
+        .breakdown .bl-add .bl .data .title {
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 22px;
+        /* identical to box height, or 137% */
+            color: #2B2F43;
+        }
+        .breakdown .bl-add .bl .data .text {
+            font-weight: normal;
+            font-size: 14px;
+            line-height: 19px;
+        /* or 136% */
+            color: #7F7B7B;
+        }
+        .breakdown .bl-add .bl .data p {
+        }
+
 
     </style>
 </head>
@@ -478,48 +565,127 @@
           </div>
       </div>
 
-      <div class="main-article">
-          <div class="label">NBA</div>
-      </div>
-      <div class="rectangle">
-          <span class="date">Published / 20.09.2019</span>
-          <p class="title">London Games return in 2019</p>
-          <p class="text">Register to receive the latest news on ticket sales for the four NFL London Games in 2019!</p>
-          <div class="more-btn">More</div>
-      </div>
-      <div class="paginator">
-          <span class="prev"><</span>&nbsp;&nbsp;
-          <span class="active">01</span>
-          <span>02</span>
-          <span>03</span>
-          <span>04</span>&nbsp;&nbsp;
-          <span class="next">></span>
-      </div>
-      <div class="all-articles">
-          <div class="subarticle">
-              <div class="photo"></div>
-              <div class="title"><a href="">Raiders release</a></div>
-              <div class="text">After a five-year stint with the Oakland Raiders</div>
+      <div class="main">
+          <div class="main-article">
+              <div class="label">NBA</div>
           </div>
-          <div class="subarticle2">
-              <div class="photo"></div>
-              <div class="title"><a href="">London Games</a></div>
-              <div class="text">NFL London Games return in 2019!</div>
+          <div class="rectangle">
+              <span class="date">Published / 20.09.2019</span>
+              <p class="title">London Games return in 2019</p>
+              <p class="text">Register to receive the latest news on ticket sales for the four NFL London Games in 2019!</p>
+              <div class="more-btn">More</div>
           </div>
-          <div class="subarticle3">
-              <div class="photo"></div>
-              <div class="title"><a href="">2019</a></div>
-              <div class="text">2019 NFL free agency</div>
+          <div class="paginator">
+              <span class="prev"><</span>&nbsp;&nbsp;
+              <span class="active">01</span>
+              <span>02</span>
+              <span>03</span>
+              <span>04</span>&nbsp;&nbsp;
+              <span class="next">></span>
           </div>
-          <div class="subarticle4">
-              <div class="photo"></div>
-              <div class="title"><a href="">Lorem ipsum</a></div>
-              <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+          <div class="all-articles">
+              <div class="subarticle">
+                  <div class="photo"></div>
+                  <div class="title"><a href="">Raiders release</a></div>
+                  <div class="text">After a five-year stint with the Oakland Raiders</div>
+              </div>
+              <div class="subarticle2">
+                  <div class="photo"></div>
+                  <div class="title"><a href="">London Games</a></div>
+                  <div class="text">NFL London Games return in 2019!</div>
+              </div>
+              <div class="subarticle3">
+                  <div class="photo"></div>
+                  <div class="title"><a href="">London Games</a></div>
+                  <div class="text">NFL 2019 NFL free agency in 2019</div>
+              </div>
+              <div class="subarticle4">
+                  <div class="photo"></div>
+                  <div class="title"><a href="">Lorem ipsum</a></div>
+                  <div class="text">Lorem ipsum dolor sit amet, consectetur</div>
+              </div>
           </div>
-      </div>
+          <br/><br/>
 
-      <div class="breakdown">
-          break
+          <div class="breakdown">
+              <div class="title">BREAKDOWN</div>
+              <br/>
+              <div class="bl-main">
+                  <a href="">
+                  <div class="bl-img">
+                      <div class="label">NBA</div>
+                  </div>
+                  <p class="bl-text">Lorem ipsum dolor sit amet, consectetur</p>
+                  </a>
+              </div>
+              <div class="bl-add">
+                  <div class="bl bl1">
+                      <a href="">
+                      <div class="img"></div>
+                      <div class="data">
+                          <p class="title">Lorem ipsum</p>
+                          <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
+                      </div>
+                      </a>
+                  </div>
+                  <div class="bl bl2">
+                      <a href="">
+                      <div class="img"></div>
+                      <div class="data">
+                          <p class="title">Lorem ipsum</p>
+                          <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
+                      </div>
+                      </a>
+                  </div>
+                  <div class="bl bl3">
+                      <a href="">
+                      <div class="img"></div>
+                      <div class="data">
+                          <p class="title">Lorem ipsum</p>
+                          <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
+                      </div>
+                      </a>
+                  </div>
+              </div>
+
+              <div class="bl-main">
+                  <a href="">
+                      <div class="bl-img">
+                          <div class="label">NBA</div>
+                      </div>
+                      <p class="bl-text">Lorem ipsum dolor sit amet, consectetur</p>
+                  </a>
+              </div>
+              <div class="bl-add">
+                  <div class="bl bl1">
+                      <a href="">
+                          <div class="img"></div>
+                          <div class="data">
+                              <p class="title">Lorem ipsum</p>
+                              <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="bl bl2">
+                      <a href="">
+                          <div class="img"></div>
+                          <div class="data">
+                              <p class="title">Lorem ipsum</p>
+                              <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                      </a>
+                  </div>
+                  <div class="bl bl3">
+                      <a href="">
+                          <div class="img"></div>
+                          <div class="data">
+                              <p class="title">Lorem ipsum</p>
+                              <p class="text">Lorem ipsum dolor sit amet, consectetur</p>
+                          </div>
+                      </a>
+                  </div>
+              </div>
+          </div>
       </div>
   </div>
 </body>
