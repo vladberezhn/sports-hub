@@ -28,6 +28,7 @@ class SubcategoriesController < ApplicationController
         format.html { redirect_to @subcategory, notice: "Subcategory was successfully created." }
         format.json { render :show, status: :created, location: @subcategory }
       else
+        puts @subcategory.errors
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @subcategory.errors, status: :unprocessable_entity }
       end
