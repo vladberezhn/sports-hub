@@ -2,8 +2,8 @@
 
 one:
   name: NHC South
-  category_id: 1
+  category: one
 
 two:
   name: NHC North
-  category_id: 1
+  category: one
