@@ -24,11 +24,10 @@ class SubcategoriesController < ApplicationController
     @subcategory = Subcategory.new(subcategory_params)
 
     respond_to do |format|
-      if @subcategory.save
+      if @subcategory.save!
         format.html { redirect_to @subcategory, notice: "Subcategory was successfully created." }
         format.json { render :show, status: :created, location: @subcategory }
       else
-        puts @subcategory.errors
         format.html { render :new, status: :unprocessable_entity }
         format.json { render json: @subcategory.errors, status: :unprocessable_entity }
       end
@@ -38,7 +37,7 @@ class SubcategoriesController < ApplicationController
   # PATCH/PUT /subcategories/1 or /subcategories/1.json
   def update
     respond_to do |format|
-      if @subcategory.update(subcategory_params)
+      if @subcategory.update!(subcategory_params)
         format.html { redirect_to @subcategory, notice: "Subcategory was successfully updated." }
         format.json { render :show, status: :ok, location: @subcategory }
       else
