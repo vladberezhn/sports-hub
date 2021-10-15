@@ -4,7 +4,4 @@ FactoryBot.define do
   factory :category do
     name { 'NHL' }
   end
-
-  category1 = create(:category)
-  category2 = create(:category, name: 'NBA')
 end
