@@ -1,0 +1,12 @@
+<div class="left-menu">
+  <a class="active" href="">Home</a><br/>
+  <% @categories.each do |category| %>
+    <a href=""><%= category.name %></a><br/>
+  <% end %>
+
+  <div class="follow">
+    <span>Follow</span>
+    <div class="fb"></div>
+    <div class="tw"></div>
+  </div>
+</div>

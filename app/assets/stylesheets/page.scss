@@ -1,0 +1,582 @@
+// Place all the styles related to the page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+body {
+  margin: 0 !important;
+}
+body * {
+  font-family: Open Sans;
+  font-style: normal;
+}
+.container {
+  position: relative;
+  width: 1440px;
+  height: 3260px;
+  background: #FFFFFF;
+}
+.header {
+  position: absolute;
+  width: 1440px;
+  height: 84px;
+  left: 0px;
+  top: -1px;
+}
+.logo {
+  position: absolute;
+  width: 253px;
+  height: 83px;
+  left: 0px;
+  top: 1px;
+
+  background: #D72130;
+}
+.logo .text {
+  position: absolute;
+  width: 119px;
+  height: 28px;
+  left: 68px;
+  top: 27px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  /*font-weight: 600;*/
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height, or 127% */
+
+  color: #FFFBFB;
+}
+.search {
+  position: absolute;
+  left: 20.14%;
+  right: 72.5%;
+  top: 39.29%;
+  bottom: 38.1%;
+}
+.header input {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  border: none;
+  width: 70px;
+  height: 19px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  /* identical to box height */
+
+  color: #B2B2B2;
+}
+.header input::placeholder {
+  color: #B2B2B2;
+}
+.header .search .icon-search {
+  position: absolute;
+  background-image: url(page/iconfinder.png);
+  width: 16px;
+  height: 17px;
+}
+.header .social {
+  position: absolute;
+  left: 54.1%;
+  right: 33.4%;
+  top: 36.9%;
+  bottom: 39.29%;
+}
+.header .social span {
+  position: absolute;
+  height: 22px;
+  left: 0%;
+  right: 20.83%;
+  top: calc(50% - 22px/2 + 0.5px);
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  /* Lable name */
+  color: #7F8899;
+}
+.header .social .fb {
+  position: absolute;
+  left: 53px;
+  right: 0%;
+  top: 4.59%;
+  bottom: 0.67%;
+  background-image: url(page/fb.png);
+  width: 9px;
+  height: 18px;
+}
+.header .social .tw {
+  position: absolute;
+  left: 93px;
+  right: 0%;
+  top: 4.59%;
+  bottom: 0.67%;
+  background-image: url(page/twitter.png);
+  width: 21px;
+  height: 19px;
+}
+.header .social .gp {
+  position: absolute;
+  left: 139px;
+  right: 0%;
+  top: 4.59%;
+  bottom: 0.67%;
+  background-image: url(page/g-plus.png);
+  width: 20px;
+  height: 19px;
+}
+
+.header .user {
+  position: absolute;
+  width: 132px;
+  height: 34px;
+  left: 1132px;
+  top: 25px;
+}
+.header .user .ellipse {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+
+  background: url(page/Ellipse.png);
+}
+.header .user .title {
+  position: absolute;
+  width: 90px;
+  height: 13px;
+  left: 40px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  /* or 200% */
+
+  color: #000000;
+}
+.header .user .polygon {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  left: 120px;
+  top: 6px;
+
+  background: #000000;
+  transform: rotate(-180deg);
+}
+.header .lang {
+  position: absolute;
+  width: 38px;
+  height: 17px;
+  left: 1340px;
+  top: 35px;
+}
+.header .lang span {
+  position: absolute;
+  left: 0%;
+  right: 50%;
+  top: 0%;
+  bottom: 0%;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  /* identical to box height, or 142% */
+
+  text-align: center;
+
+  color: #000000;
+}
+.header .lang .polygon {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  left: 27px;
+  top: 6px;
+
+  background: #000000;
+  transform: rotate(-180deg);
+}
+
+.left-menu {
+  position: absolute;
+  width: 99px;
+  height: 673px;
+  left: 52px;
+  top: 158px;
+}
+.left-menu a {
+  display: block;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height, or 136% */
+
+  text-transform: uppercase;
+  text-decoration: none;
+  /* Menu items */
+  color: #B2B2B2;
+}
+.left-menu a:hover {
+  color: #B2B2B2;
+  background-color: transparent;
+}
+.left-menu a.active {
+  color: #C63638;
+}
+
+.follow {
+  position: absolute;
+  width: 75.72px;
+  height: 92px;
+  left: 13px;
+  top: 542px;
+}
+.follow span {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 22px;
+  /* identical to box height, or 157% */
+
+  /* Lable name */
+  color: #7F8899;
+}
+.follow .fb {
+  position: absolute;
+  left: 5px;
+  top: 30px;
+  background-image: url(page/fb.png);
+  width: 9px;
+  height: 18px;
+}
+.follow .tw {
+  position: absolute;
+  left: 40px;
+  top: 30px;
+  background-image: url(page/twitter.png);
+  width: 21px;
+  height: 19px;
+}
+
+.main-article {
+  width: 814px;
+  height: 460px;
+
+  background: url(page/main-photo-article.png);
+}
+.main-article .label,
+.breakdown .bl-main .bl-img .label {
+  width: 134px;
+  height: 39px;
+  background: #2F2F2F;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  /* identical to box height, or 136% */
+  color: #FFFFFF;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+.all-articles {
+  width: 828px;
+  height: 294px;
+}
+.subarticle, .subarticle2, .subarticle3, .subarticle4 {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 202px;
+  height: 294px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.subarticle .photo,
+.subarticle2 .photo,
+.subarticle3 .photo,
+.subarticle4 .photo {
+  width: 100%;
+  height: 128px;
+  margin-bottom: 17px;
+}
+.subarticle .photo {
+  background: url(page/subarticle-photo1.png);
+}
+.subarticle2 .photo {
+  background: url(page/subarticle-photo2.png);
+}
+.subarticle3 .photo {
+  background: url(page/subarticle-photo3.png);
+}
+.subarticle4 .photo {
+  background: url(page/subarticle-photo4.png);
+}
+.subarticle .title,
+.subarticle2 .title,
+.subarticle3 .title,
+.subarticle4 .title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+  color: #2B2F43;
+  margin: 8px 0;
+}
+.subarticle .title a,
+.subarticle2 .title a,
+.subarticle3 .title a,
+.subarticle4 .title a {
+  text-decoration: none;
+  color: #000;
+}
+.subarticle .text,
+.subarticle2 .text,
+.subarticle3 .text,
+.subarticle4 .text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  /* or 136% */
+  color: #7F7B7B;
+}
+
+.rectangle {
+  position: absolute;
+  width: 421px;
+  height: 291px;
+  box-sizing: border-box;
+  left: 639px;
+  top: 90px;
+  background: #F6F6F6;
+  padding: 36px;
+}
+.rectangle .date {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height */
+  color: #7F7B7B;
+}
+.rectangle .title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+  color: #C63638;
+}
+.rectangle .text {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  /* or 136% */
+  color: #2B2F43;
+}
+.rectangle .more-btn {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 174px;
+  height: 35px;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 9px;
+  background: #D72130;
+  color: #FFFBFB;
+}
+.paginator {
+  position: absolute;
+  left: 868px;
+  top: 407px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+  letter-spacing: 0.761905px;
+  color: #B2B2B2;
+}
+.paginator .active {
+  color: #C63638;
+}
+.main {
+  position: absolute;
+  top: 158px;
+  left: 250px;
+  width: 1190px;
+  height: 3260px;
+}
+.breakdown {
+  position: relative;
+}
+.breakdown > .title {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  text-align: center;
+  left: 27%;
+  width: 178px;
+  position: relative;
+}
+.breakdown .bl-main, .bl-add {
+  width: 390px;
+  height: 295px;
+  border: 1px solid #EDEDED;
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 20px;
+}
+.breakdown .bl-add {
+  /*top: 43px;
+  position: absolute;*/
+  border: none;
+}
+.breakdown .bl-main .bl-img {
+  width: 389px;
+  height: 196px;
+  background: url(page/rectangle.png);
+}
+.breakdown .bl-main .bl-text {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  /* or 136% */
+  color: #2B2F43;
+  padding: 0 18px;
+}
+.breakdown .bl-add .bl {
+  width: 392px;
+  height: 98px;
+  border: 1px solid #EDEDED;
+}
+.breakdown .bl-add .bl div {
+  display: inline-block;
+  box-sizing: border-box;
+}
+.breakdown .bl-add .bl .img {
+  width: 151px;
+  height: 97px;
+}
+.breakdown .bl-add .bl.bl1 .img {
+  background: url(page/Rectangle1.png);
+}
+.breakdown .bl-add .bl.bl2 .img {
+  background: url(page/Rectangle2.png);
+}
+.breakdown .bl-add .bl.bl3 .img {
+  background: url(page/Rectangle3.png);
+}
+.breakdown .bl-add .bl .data {
+  width: 230px;
+  height: 97px;
+  padding: 10px;
+}
+.breakdown .bl-add .bl .data .title {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  /* identical to box height, or 137% */
+  color: #2B2F43;
+}
+.breakdown .bl-add .bl .data .text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  /* or 136% */
+  color: #7F7B7B;
+}
+.breakdown .bl-add .bl .data p {
+}
+
+.photo-of-day > .title {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  color: #000000;
+  text-align: center;
+  left: 27%;
+  width: 178px;
+  position: relative;
+  text-transform: uppercase;
+}
+.photo-of-day .photo-day {
+  position: relative;
+  width: 815px;
+  height: 577px;
+  background: url(page/photo-day.png);
+  margin: 20px;
+}
+.photo-of-day .photo-day p {
+  padding-left: 25px;
+}
+.photo-of-day .photo-day .data {
+  position: absolute;
+  bottom: 0;
+}
+.photo-of-day .photo-day .title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  /* identical to box height, or 136% */
+  color: #FFFFFF;
+}
+.photo-of-day .photo-day .text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 19px;
+  /* or 136% */
+  color: #FFFFFF;
+  width: 535px;
+}
+.photo-of-day .photo-day .flag-img {
+  position: absolute;
+  left: -15px;
+  top: -15px;
+  width: 169px;
+  height: 123px;
+  background: url(page/Triangle.png);
+}
+.photo-of-day .photo-day .flag-img .text {
+  position: absolute;
+  top: 30px;
+  left: 16px;
+  width: 62px;
+  height: 66px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 22px;
+  /* or 137% */
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
