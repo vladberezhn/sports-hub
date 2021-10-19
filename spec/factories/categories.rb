@@ -2,11 +2,11 @@
 
 FactoryBot.define do
   factory :category do
-    name { 'NHL' }
+    name { 'NFL' }
   end
 
   factory :subcategory do
-    name { 'NHC South' }
+    name { 'AFC East' }
     category
   end
 end
@@ -14,6 +14,15 @@ end
 def category_with_subcategories
   FactoryBot.create(:category) do |category|
     FactoryBot.create(:subcategory, category: category)
-    FactoryBot.create(:subcategory, name: 'NHC North', category: category)
+    subcategories = ['AFC North',
+                     'AFC South',
+                     'AFC West',
+                     'NFC East',
+                     'NFC North',
+                     'NFC South',
+                     'NFC West']
+    subcategories.each do |subcategory|
+      FactoryBot.create(:subcategory, name: subcategory, category: category)
+    end
   end
 end

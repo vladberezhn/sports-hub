@@ -60,4 +60,10 @@ gem 'rexml'
 group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
 end
