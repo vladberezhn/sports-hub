@@ -1,12 +1,12 @@
 # frozen_string_literal: true
 
 require 'rails_helper'
-require 'database_cleaner/active_record'
+# require 'database_cleaner/active_record'
 
 RSpec.describe Category, type: :model do
   before(:all) do
-    DatabaseCleaner.strategy = :truncation
-    DatabaseCleaner.clean
+    # DatabaseCleaner.strategy = :truncation
+    # DatabaseCleaner.clean
 
     # @category1 = create(:category)
     @category1 = category_with_subcategories
