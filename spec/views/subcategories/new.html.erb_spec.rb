@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe "subcategories/new", type: :view do
   before(:each) do
-    assign(:subcategory, Subcategory.new())
+    assign(:subcategory, build(:subcategory))
   end
 
   it "renders new subcategory form" do
