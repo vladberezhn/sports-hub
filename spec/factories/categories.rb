@@ -3,6 +3,7 @@
 FactoryBot.define do
   factory :category do
     name { 'NFL' }
+    initialize_with { Category.find_or_create_by(name: name) }
   end
 
   factory :subcategory do
