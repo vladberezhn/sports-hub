@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '2.7.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
@@ -56,3 +56,16 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'rexml'
+
+group :development, :test do
+  gem 'factory_bot_rails'
+  gem 'rspec-rails'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec', require: false
+end
+
+group :test do
+  gem 'database_cleaner-active_record'
+end
+
+gem 'pg'
