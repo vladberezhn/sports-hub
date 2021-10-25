@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  get '/', to: 'page#index'
+  devise_for :users
+
+  root to: 'page#index'
+  # get '/', to: 'page#index'
 
   resources :subcategories
   resources :categories
