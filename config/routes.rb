@@ -2,11 +2,7 @@
 
 Rails.application.routes.draw do
   namespace :admin do
-    get 'page/index'
     get '/', to: 'page#index'
-  end
-  namespace :admin do
-    resources :articles, :comments
   end
 
   get '/', to: 'page#index'
