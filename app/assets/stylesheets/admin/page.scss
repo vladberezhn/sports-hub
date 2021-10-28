@@ -1,0 +1,129 @@
+// Place all the styles related to the Admin::Page controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.header {
+  position: relative;
+  width: 1440px;
+  height: 84px;
+  left: 0px;
+  top: -1px;
+}
+.logo {
+  position: absolute;
+  width: 253px;
+  height: 83px;
+  left: 0px;
+  top: 1px;
+
+  background: #D72130;
+}
+.logo .text {
+  position: absolute;
+  width: 119px;
+  height: 28px;
+  left: 68px;
+  top: 27px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  /*font-weight: 600;*/
+  font-size: 22px;
+  line-height: 28px;
+  /* identical to box height, or 127% */
+
+  color: #FFFBFB;
+}
+.header .user {
+  position: absolute;
+  width: 132px;
+  height: 34px;
+  left: 1132px;
+  top: 25px;
+}
+.header .user .ellipse {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+
+  background: url(page/Ellipse.png);
+}
+.header .user .title {
+  position: absolute;
+  width: 90px;
+  height: 13px;
+  left: 40px;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 24px;
+  /* or 200% */
+
+  color: #000000;
+}
+.header .user .polygon {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  left: 120px;
+  top: 6px;
+
+  background: #000000;
+  transform: rotate(-180deg);
+}
+.header .lang {
+  position: absolute;
+  width: 38px;
+  height: 17px;
+  left: 1340px;
+  top: 35px;
+}
+.header .lang span {
+  position: absolute;
+  left: 0%;
+  right: 50%;
+  top: 0%;
+  bottom: 0%;
+
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 17px;
+  /* identical to box height, or 142% */
+
+  text-align: center;
+
+  color: #000000;
+}
+.header .lang .polygon {
+  position: absolute;
+  width: 11px;
+  height: 8px;
+  left: 27px;
+  top: 6px;
+
+  background: #000000;
+  transform: rotate(-180deg);
+}
+
+.top-menu a {
+  display: inline-block;
+  margin: 22px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #B2B2B2;
+}
+.top-menu a:hover {
+  color: #B2B2B2;
+  background-color: transparent;
+}
+.top-menu a.active {
+  color: #C63638;
+}
