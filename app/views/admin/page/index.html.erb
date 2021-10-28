@@ -1,0 +1,9 @@
+
+<%= render 'header' %>
+
+<h1>Home</h1>
+<div class="top-menu">
+  <% @categories.each do |category| %>
+    <a href=""><%= category.name %></a>
+  <% end %>
+</div>
