@@ -4,6 +4,7 @@
 
 body {
   margin: 0 !important;
+  padding: 10px;
 }
 body * {
   font-family: Open Sans;
@@ -579,4 +580,15 @@ body * {
   /* or 137% */
   text-transform: uppercase;
   color: #FFFFFF;
+}
+.sign-out-link {
+  float: right;
+  margin-right: 78px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 19px;
+  text-decoration: none;
+  color: #B2B2B2;
 }
