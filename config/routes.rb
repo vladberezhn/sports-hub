@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
+  devise_for :users, controllers: {
+    registrations: 'users/registrations'
+  }
+
+  root to: 'page#index'
+  # get '/', to: 'page#index'
+
   namespace :admin do
     get '/', to: 'page#index'
   end
-
-  get '/', to: 'page#index'
 
   resources :subcategories
   resources :categories
