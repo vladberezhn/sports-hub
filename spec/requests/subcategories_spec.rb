@@ -13,7 +13,7 @@ require 'rails_helper'
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
 RSpec.describe "/subcategories", type: :request do
-  
+
   # Subcategory. As you add validations to Subcategory, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
@@ -43,7 +43,8 @@ RSpec.describe "/subcategories", type: :request do
   describe "GET /new" do
     it "renders a successful response" do
       get new_subcategory_url
-      expect(response).to be_successful
+      # expect(response).to be_successful
+      expect(response.status).to eq(302)
     end
   end
 
