@@ -2,13 +2,17 @@
 
 module Admin
   class PageController < ApplicationController
+    before_action :admin_page_display
+
     def index
-      admin_list
       @categories = Category.all
     end
 
-    def admin_list
-      authorize User
+    private
+
+    def admin_page_display
+      # page display for admin role only
+      authorize :page, :admin_list?
     end
   end
 end

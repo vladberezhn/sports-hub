@@ -4,7 +4,14 @@
   </div>
   <div class="user">
     <div class="ellipse"></div>
-    <span class="title">Roma Smith</span>
+    <span class="title">
+      <% user = current_user %>
+      <% if user.firstname %>
+        <%= user.firstname + ' ' + user.lastname %>
+      <% else %>
+        <%= user.email %>
+      <% end %>
+    </span>
     <span class="polygon"></span>
   </div>
 <!--  <div class="lang">-->
