@@ -1,5 +1,6 @@
 class SubcategoriesController < ApplicationController
   before_action :set_subcategory, only: %i[ show edit update destroy ]
+  before_action :restrict_admin_access
 
   # GET /subcategories or /subcategories.json
   def index
@@ -57,13 +58,18 @@ class SubcategoriesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_subcategory
-      @subcategory = Subcategory.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_subcategory
+    @subcategory = Subcategory.find(params[:id])
+  end
 
-    # Only allow a list of trusted parameters through.
-    def subcategory_params
-      params.require(:subcategory).permit(:name, :category_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def subcategory_params
+    params.require(:subcategory).permit(:name, :category_id)
+  end
+
+  # display for admin role only
+  def restrict_admin_access
+    authorize :admin_panel, :access?
+  end
 end
