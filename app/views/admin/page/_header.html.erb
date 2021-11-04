@@ -1,10 +1,20 @@
 <div class="header">
+  <a href="/">
   <div class="logo">
     <div class="text">Sports Hub</div>
   </div>
+  </a>
   <div class="user">
     <div class="ellipse"></div>
-    <span class="title">Roma Smith</span>
+    <span class="title">
+      <% user = current_user %>
+      <% if user.firstname %>
+        <%= user.firstname + ' ' + user.lastname %>
+      <% else %>
+        <%= user.email %>
+      <% end %>
+    </span>
+    <span class="role">Administrator</span>
     <span class="polygon"></span>
   </div>
 <!--  <div class="lang">-->
