@@ -4,26 +4,29 @@ require 'rails_helper'
 # require 'database_cleaner/active_record'
 
 RSpec.describe Category, type: :model do
-  before(:all) do
-    # DatabaseCleaner.strategy = :truncation
-    # DatabaseCleaner.clean
+  # before(:all) do
+  #   # DatabaseCleaner.strategy = :truncation
+  #   # DatabaseCleaner.clean
+  #
+  #   # @category1 = create(:category)
+  #   @category1 = category_with_subcategories
+  #   @category2 = create(:category, name: 'NBA')
+  # end
 
-    # @category1 = create(:category)
-    @category1 = category_with_subcategories
-    @category2 = create(:category, name: 'NBA')
+  let(:category1) { category_with_subcategories }
+  let(:category2) { create(:category, name: 'NBA') }
+
+  it 'should be valid' do
+    expect(category1).to be_valid
   end
 
   it 'should be valid' do
-    expect(@category1).to be_valid
-  end
-
-  it 'should be valid' do
-    expect(@category2).to be_valid
+    expect(category2).to be_valid
   end
 
   it 'subcategories should be valid' do
-    expect(@category1.subcategories.length).to eq(8)
-    @category1.subcategories.each do |subcategory|
+    expect(category1.subcategories.length).to eq(8)
+    category1.subcategories.each do |subcategory|
       expect(subcategory).to be_valid
     end
   end
