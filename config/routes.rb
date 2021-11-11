@@ -10,6 +10,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     get '/', to: 'page#index'
+
+    get 'block/:id', to: 'page#block_user'
+    get 'activate/:id', to: 'page#activate_user'
   end
 
   resources :subcategories

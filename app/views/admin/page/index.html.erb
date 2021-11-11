@@ -7,3 +7,30 @@
     <a href=""><%= category.name %></a>
   <% end %>
 </div>
+
+<h3>Users</h3>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Status</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.firstname %></td>
+      <td><%= user.lastname %></td>
+      <td><%= user.email %></td>
+      <td><%= (user.account_active?) ? 'active' : 'blocked' %></td>
+      <td>
+        <% unless user.role.eql?('admin') %>
+          <% if user.account_active? %>
+            <a href="<%= block_user_href(user.id) %>">Block</a>
+          <% else %>
+            <a href="<%= activate_user_href(user.id) %>">Activate</a>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
