@@ -22,15 +22,7 @@
       <td><%= user.lastname %></td>
       <td><%= user.email %></td>
       <td><%= (user.account_active?) ? 'active' : 'blocked' %></td>
-      <td>
-        <% unless user.role.eql?('admin') %>
-          <% if user.account_active? %>
-            <%= link_to('Block', admin_block_user_url(user.id)) %>
-          <% else %>
-            <%= link_to('Activate', admin_activate_user_url(user.id)) %>
-          <% end %>
-        <% end %>
-      </td>
+      <td><%= block_or_activate_user_href(user) %></td>
     </tr>
   <% end %>
 </table>
