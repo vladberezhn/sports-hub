@@ -25,9 +25,9 @@
       <td>
         <% unless user.role.eql?('admin') %>
           <% if user.account_active? %>
-            <a href="<%= block_user_href(user.id) %>">Block</a>
+            <a href="<%= admin_block_user_url(user.id) %>">Block</a>
           <% else %>
-            <a href="<%= activate_user_href(user.id) %>">Activate</a>
+            <a href="<%= admin_activate_user_url(user.id) %>">Activate</a>
           <% end %>
         <% end %>
       </td>
