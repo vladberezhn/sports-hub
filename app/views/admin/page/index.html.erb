@@ -22,7 +22,7 @@
       <td><%= user.lastname %></td>
       <td><%= user.email %></td>
       <td><%= (user.account_active?) ? 'active' : 'blocked' %></td>
-      <td><%= block_or_activate_user_href(user) %></td>
+      <td><%= block_or_activate_user_link(user) %></td>
     </tr>
   <% end %>
 </table>
