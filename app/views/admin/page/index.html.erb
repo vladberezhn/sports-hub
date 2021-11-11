@@ -7,3 +7,23 @@
     <a href=""><%= category.name %></a>
   <% end %>
 </div>
+
+<h3>Users</h3>
+<table>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th>
+    <th>Email</th>
+    <th>Status</th>
+  </tr>
+  <% @users.each do |user| %>
+    <tr>
+      <td><%= user.firstname %></td>
+      <td><%= user.lastname %></td>
+      <td><%= user.email %></td>
+      <td><%= (user.account_active?) ? 'active' : 'blocked' %></td>
+      <td><%= block_or_activate_user_link(user) %></td>
+    </tr>
+  <% end %>
+</table>
+<%== pagy_nav(@pagy) %>
