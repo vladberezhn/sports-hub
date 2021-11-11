@@ -6,7 +6,7 @@ module Admin
 
     def index
       @categories = Category.all
-      @users = User.all
+      @pagy, @users = pagy(User.all)
     end
 
     def block_user

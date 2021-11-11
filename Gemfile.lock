@@ -127,6 +127,7 @@ GEM
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     orm_adapter (0.5.0)
+    pagy (5.3.0)
     parallel (1.21.0)
     parser (3.0.2.0)
       ast (~> 2.4.1)
@@ -279,6 +280,7 @@ DEPENDENCIES
   factory_bot_rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
+  pagy
   pg
   puma (~> 5.0)
   pundit
