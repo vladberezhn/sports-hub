@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   }
 
   root to: 'page#index'
+  get '/:locale', to: 'page#index'
   # get '/', to: 'page#index'
 
   namespace :admin do
@@ -15,7 +16,9 @@ Rails.application.routes.draw do
     get 'activate/:id', to: 'page#activate_user', as: 'activate_user'
   end
 
-  resources :subcategories
-  resources :categories
+  scope '(:locale)', locale: /#{I18n.available_locales.join('|')}/ do
+    resources :subcategories
+    resources :categories
+  end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
