@@ -30,4 +30,19 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  hello: "Hello"
+  sign_out: "Sign Out"
+  header:
+    sports_hub: "Sports Hub"
+    search_by: "Search by"
+    share: "Share"
+  admin:
+    home: "Home"
+    users:
+      title: "Users"
+      firstname: "Firstname"
+      lastname: "Lastname"
+      email: "Email"
+      status: "Status"
+      active: "active"
+      blocked: "blocked"

@@ -3,12 +3,12 @@
   <%= render 'menu' %>
 
   <div class="main">
-    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: 'sign-out-link' %>
+    <%= link_to t(:sign_out), destroy_user_session_path, method: :delete, class: 'sign-out-link' %>
     <p>
 <!--      <p class="notice"><%#= notice %></p>-->
 <!--      <p class="alert"><%#= alert %></p>-->
 
-      Hello, <b><%= current_user.firstname %></b>
+      <%= t(:hello) %>, <b><%= current_user.firstname %></b>
     </p>
 
     <div class="main-article">

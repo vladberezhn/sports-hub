@@ -1,2 +1,17 @@
 es:
-  hello: "Spanish world"
+  hello: "Hola"
+  sign_out: "Desconectar"
+  header:
+    sports_hub: "Centro deportivo"
+    search_by: "Búsqueda por"
+    share: "Cuota"
+  admin:
+    home: "Hogar"
+    users:
+      title: "Usuarios"
+      firstname: "Nombre de pila"
+      lastname: "Apellido"
+      email: "Correo electrónico"
+      status: "Estado"
+      active: "activo"
+      blocked: "obstruido"

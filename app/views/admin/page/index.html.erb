@@ -1,27 +1,27 @@
 
 <%= render 'header' %>
 
-<h1>Home</h1>
+<h1><%= t('admin.home') %></h1>
 <div class="top-menu">
   <% @categories.each do |category| %>
     <a href=""><%= category.name %></a>
   <% end %>
 </div>
 
-<h3>Users</h3>
+<h3><%= t('admin.users.title') %></h3>
 <table>
   <tr>
-    <th>Firstname</th>
-    <th>Lastname</th>
-    <th>Email</th>
-    <th>Status</th>
+    <th><%= t('admin.users.firstname') %></th>
+    <th><%= t('admin.users.lastname') %></th>
+    <th><%= t('admin.users.email') %></th>
+    <th><%= t('admin.users.status') %></th>
   </tr>
   <% @users.each do |user| %>
     <tr>
       <td><%= user.firstname %></td>
       <td><%= user.lastname %></td>
       <td><%= user.email %></td>
-      <td><%= (user.account_active?) ? 'active' : 'blocked' %></td>
+      <td><%= (user.account_active?) ? t('active') : t('blocked') %></td>
       <td><%= block_or_activate_user_link(user) %></td>
     </tr>
   <% end %>

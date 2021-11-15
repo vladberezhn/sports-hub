@@ -1,13 +1,13 @@
 <div class="header">
   <div class="logo">
-    <div class="text">Sports Hub</div>
+    <div class="text"><%= t('header.sports_hub') %></div>
   </div>
   <div class="search">
     <div class="icon-search"></div>
-    <input class="" type="text" placeholder="Search by" />
+    <input class="" type="text" placeholder="<%= t('header.search_by') %>" />
   </div>
   <div class="social">
-    <span>Share</span>
+    <span><%= t('header.share') %></span>
     <div class="fb"></div>
     <div class="tw"></div>
     <div class="gp"></div>
@@ -25,7 +25,7 @@
     <span class="polygon"></span>
   </div>
   <div class="lang">
-    <span>EN</span>
+    <span><%= params[:locale] %></span>
     <span class="polygon"></span>
   </div>
 </div>
