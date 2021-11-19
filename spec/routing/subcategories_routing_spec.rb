@@ -2,9 +2,9 @@ require "rails_helper"
 
 RSpec.describe SubcategoriesController, type: :routing do
   describe "routing" do
-    it "routes to #index" do
-      expect(get: "/subcategories").to route_to("subcategories#index")
-    end
+    # it "routes to #index" do
+    #   expect(get: "/subcategories").to route_to("subcategories#index")
+    # end
 
     it "routes to #new" do
       expect(get: "/subcategories/new").to route_to("subcategories#new")
