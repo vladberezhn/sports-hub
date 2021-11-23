@@ -13,6 +13,7 @@ module Admin
       @user = User.find(params[:id])
       @user.set_as_blocked
       if @user.save
+        CustomMailer.with(user: @user).block_email.deliver_later
         redirect_to admin_url, notice: 'User has been blocked.'
       else
         redirect_to admin_url, notice: 'Something went wrong, try again.'
