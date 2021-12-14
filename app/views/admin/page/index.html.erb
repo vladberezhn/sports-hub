@@ -8,6 +8,15 @@
   <% end %>
 </div>
 
+<p>
+  Test solution result: <%= @test_solution %>
+</p>
+
+<p>Active users:<p>
+<% @active_users.each do |user| %>
+  <p><%= user.firstname + ' ' + user.lastname %></p>
+<% end %>
+
 <h3><%= t('admin.users.title') %></h3>
 <table>
   <tr>

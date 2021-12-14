@@ -7,6 +7,10 @@ module Admin
     def index
       @categories = Category.all
       @pagy, @users = pagy(User.all)
+
+      @test_solution = solution(2)
+
+      @active_users = User.active
     end
 
     def block_user
@@ -35,6 +39,17 @@ module Admin
     # display for admin role only
     def restrict_admin_access
       authorize :admin_panel, :access?
+    end
+
+    def solution(n)
+      return (1..n).inject { |sum, n| sum + (n * n + 1) }
+      #
+      # Test.assert_equals(validate_pin(""),false)
+      #     Test.assert_equals(validate_pin("1"),false)
+      #     Test.assert_equals(validate_pin("1111"),true)
+      #     Test.assert_equals(validate_pin("123456"),true)
+      #     Test.assert_equals(validate_pin("1234567890"),false)
+      #     Test.assert_equals(validate_pin("12"),false)
     end
   end
 end
