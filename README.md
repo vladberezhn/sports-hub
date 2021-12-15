@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The application uses
+Ruby 2.7.2,
+Rails 6.1.4
 
-Things you may want to cover:
+To install all gem dependencies, run the command in terminal:
+> bundle install
 
-* Ruby version
+To initialize the database, please run the command:
+> rails db:migrate
 
-* System dependencies
+To run the application, execute the command in terminal:
+> rails server
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run tests, execute the command:
+> rspec
