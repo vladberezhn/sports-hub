@@ -16,6 +16,9 @@
 <% @active_users.each do |user| %>
   <p><%= user.firstname + ' ' + user.lastname %></p>
 <% end %>
+<br/>
+<p>Chosen category:</p>
+<p><%= @category %></p>
 
 <h3><%= t('admin.users.title') %></h3>
 <table>

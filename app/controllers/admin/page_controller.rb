@@ -11,6 +11,8 @@ module Admin
       @test_solution = solution(2)
 
       @active_users = User.active
+
+      @category = Category.find(21)
     end
 
     def block_user
